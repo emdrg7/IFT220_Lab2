@@ -44,7 +44,6 @@ $domainname = Read-Host "ad.<your ASUrite ID>.lan"
 
 Write-Host -ForegroundColor Red "After you supply the SafeModeAdministratorPassword the machine will reboot on its own."
 
-import-module servermanager
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools | Out-Null
 Install-ADDSForest -DomainName $domainname
 
